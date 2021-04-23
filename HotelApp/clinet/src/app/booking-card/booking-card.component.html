@@ -1,0 +1,11 @@
+<div class="card text-center">
+  <div class="card-header">ID: {{booking.id}}</div>
+  <div class="card-body">
+    <h5 class="card-title">{{booking.hotel.name}}</h5>
+    <p class="card-text">
+      {{booking.hotel.address}}
+    </p>
+    <a href="#" class="btn btn-primary">Mr/Miss {{booking.user.fullName}}</a>
+  </div>
+  <div class="card-footer text-muted">{{booking.start}} - {{booking.end}}</div>
+</div>

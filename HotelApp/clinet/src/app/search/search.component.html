@@ -1,0 +1,24 @@
+<div class="container mt-3">
+  <form
+    [formGroup]="searchBox"
+  >
+
+    <div class="form-floating">
+      <input formControlName="filter" type="text" class="form-control" id="floatingInput">
+      <label for="floatingInput">Name or City</label>
+    </div>
+
+    <div class="d-flex flex-row-reverse">
+      <button (click)="getByCity()" class="btn btn-primary">Search By City</button>
+      <button (click)="getByName()" class="btn btn-primary">Search By Name</button>
+    </div>
+  </form>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4" *ngFor="let hotel of hotels">
+      <app-hotel-card [hotel]="hotel"></app-hotel-card>
+    </div>
+  </div>
+</div>
